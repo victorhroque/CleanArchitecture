@@ -19,5 +19,10 @@ namespace CleanArchitecture.RepositoryEFCore.Repositories
         {
             return Context.Products;
         }
+
+        public Product? GetById(int id)
+        {
+            return Context.Products.FirstOrDefault(p => p.Id == id);
+        }
     }
 }

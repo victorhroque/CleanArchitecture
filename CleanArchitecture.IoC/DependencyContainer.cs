@@ -8,7 +8,7 @@ namespace CleanArchitecture.IoC
 {
     public static class DependencyContainer
     {
-        public static IServiceCollection AddCleanArchitectureClean(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddCleanArchitecture(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddRepositoriesServices(configuration);
             services.AddUseCasesServices();

@@ -17,12 +17,12 @@ namespace CleanArchitecture.UseCases.GetAllProducts
 
         public Task Handle()
         {
-            var produtcs = _productRepository.GetAllProducts().Select(x => new ProductDTO
+            var products = _productRepository.GetAllProducts().Select(x => new ProductDTO
             {
                 Id = x.Id,
                 Name = x.Name
             });
-            _port.Handle(produtcs);
+            _port.Handle(products);
             return Task.CompletedTask;
         }
     }

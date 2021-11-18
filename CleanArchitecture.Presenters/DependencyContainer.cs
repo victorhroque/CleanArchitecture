@@ -9,6 +9,7 @@ namespace CleanArchitecture.Presenters
         {
             services.AddScoped<ICreateProductOuputPort, CreateProductPresenter>();
             services.AddScoped<IGetAllProductsOutputPort, GetAllProductsPresenter>();
+            services.AddScoped<IGetByIdProductOutputPort, GetByIdProductPresenter>();
             return services;
         }
 
